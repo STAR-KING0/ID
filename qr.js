@@ -56,15 +56,23 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Maher_Zubair.sendMessage(Qr_Code_By_Maher_Zubair.user.id, { text: 'SIGMA-MD;;;' + b64data });
-	
+				   let session = await Pair_Code_By_Maher_Zubair.sendMessage(Pair_Code_By_Maher_Zubair.user.id, { text: data });
 				   let SIGMA_MD_TEXT = `
-*_Qr Code By Maher Zubair_*
-*_Made With 🤍_*
-	
-_Don't Forget To Give Star To My Repo_`
-	 await Qr_Code_By_Maher_Zubair.sendMessage(Qr_Code_By_Maher_Zubair.user.id,{text:SIGMA_MD_TEXT},{quoted:session})
-
+          _*PAIR Successful 🔥*_
+put the above ID in the sessID variable when deploying .
+Use this Session ID for all bots by Tᴀɪʀᴀ Mᴀᴋɪɴᴏ.
+╔═════◇
+║       『••• STAR KING•••』
+║ *Channel:* _https://whatsapp.com/channel/0029VaeW5Tw4yltQOYIO5E2D_
+║ *Main GC:* _https://chat.whatsapp.com/DC38hUUVVaa1vp573QBYBF_
+║ *Github:* _https://github.com/STAR-KING0_
+║ *Owner:* _https://wa.me/2348100835767_
+║ *Note :*_Do not provide your SESSION_ID to_
+║ _anyone otherwise that can access your WA messages_
+║ _*Follow Me and Star my repo for more 🫡.*_
+╚════════════════════════╝`
+ await Pair_Code_By_Maher_Zubair.sendMessage(Pair_Code_By_Maher_Zubair.user.id,{text:SIGMA_MD_TEXT},{quoted:session})
+ 
 
 
 					await delay(100);
